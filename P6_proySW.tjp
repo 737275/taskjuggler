@@ -47,6 +47,7 @@ account cost "Project Cost" {
   account wFront "Web Front-End"
   account mFront "Mobile Front-End"
   account back "Back-End"
+  account despliegue "Despliegue"
 }
 account rev "Payments"
 # The Profit&Loss analysis should be rev - cost accounts.
@@ -179,6 +180,25 @@ task WMGame "Web & Mobile Game" {
         summary "The whole team asiigned to this task has a trip to visit a new client from May 7th to May 12th. Needed to check if the project can be finished on time or it is necessary to reasign efforts."
       }
       depends WMGame.twebF
+      depends WMGame.tmobileF
+      depends WMGame.tback
+  }
+
+  task tdespliegue "Despliegue nube" {
+      purge chargeset
+      chargeset despliegue
+      responsible boss
+      task tEvaluacionDecision "Evaluacion y decisión" {
+        effort 9d
+        allocate boss
+      }
+      task tDespliegue "Despliegue" {
+        effort 15d
+        allocate boss
+        depends WMGame.tdespliegue.tEvaluacionDecision
+      }
+      depends WMGame.twebF
+      depends WMGame.tmobileF
       depends WMGame.tback
   }
 
