@@ -5,7 +5,7 @@
  * some elements of it
  */
 
-project pSix "Web Game"  2023-03-15 +2.5m {
+project pSix "Web Game"  2024-03-15 +3m {
   # Set the default time zone for the project. If not specified, UTC
   # is used.
   timezone "Europe/Paris"
@@ -55,7 +55,7 @@ balance cost rev
 
 resource boss "Liz Bullock" {
   email "iiii@unizar.es"
-  actual:leaves project 2023-05-07 - 2023-05-12
+  actual:leaves project 2024-05-07 - 2024-05-12
   rate 160
 }
 resource dev1 "Paul Smith" {
@@ -64,7 +64,7 @@ resource dev1 "Paul Smith" {
 resource dev2 "Samantha Müller" {
   email "jjj@unizar.es"
   rate 100
-  actual:leaves project 2023-05-07 - 2023-05-12
+  actual:leaves project 2024-05-07 - 2024-05-12
 }
 resource dev3 "Peter Green" {
   email "kkk@unizar.es"
@@ -193,11 +193,11 @@ task WMGame "Web & Mobile Game" {
       depends WMGame.tmobileF
       depends WMGame.tback
       task tEvaluacionDecision "Evaluacion y decisión" {
-        effort 1d
+        effort 3d
         allocate dev1
       }
       task tDespliegue "Despliegue" {
-        effort 1d
+        effort 6d
         allocate dev1
         depends WMGame.tdespliegue.tEvaluacionDecision
       }
