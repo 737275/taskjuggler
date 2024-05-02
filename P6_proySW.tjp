@@ -190,11 +190,11 @@ task WMGame "Web & Mobile Game" {
       responsible boss
       task tEvaluacionDecision "Evaluacion y decisión" {
         effort 9d
-        allocate boss
+        allocate dev1
       }
       task tDespliegue "Despliegue" {
         effort 15d
-        allocate boss
+        allocate dev1
         depends WMGame.tdespliegue.tEvaluacionDecision
       }
       depends WMGame.twebF
