@@ -192,11 +192,11 @@ task WMGame "Web & Mobile Game" {
       depends WMGame.tmobileF
       depends WMGame.tback
       task tEvaluacionDecision "Evaluacion y decisión" {
-        effort 9d
+        effort 3d
         allocate dev1
       }
       task tDespliegue "Despliegue" {
-        effort 15d
+        effort 6d
         allocate dev1
         depends WMGame.tdespliegue.tEvaluacionDecision
       }
