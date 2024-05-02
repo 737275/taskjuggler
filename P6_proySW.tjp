@@ -169,7 +169,7 @@ task WMGame "Web & Mobile Game" {
     }    
   }
 
-  task ttest "Accpetance tests" {
+  task ttest "Acceptance tests" {
       effort 10d
       allocate boss
       allocate dev2
@@ -178,7 +178,7 @@ task WMGame "Web & Mobile Game" {
       journalentry 2024-04-13 "Problems with the planned dates" {
         author boss
         alert red
-        summary "The whole team asiigned to this task has a trip to visit a new client from May 7th to May 12th. Needed to check if the project can be finished on time or it is necessary to reasign efforts."
+        summary "The whole team asigned to this task has a trip to visit a new client from May 7th to May 12th. Needed to check if the project can be finished on time or it is necessary to reasign efforts."
       }
       depends WMGame.twebF
       depends WMGame.tmobileF
@@ -195,6 +195,11 @@ task WMGame "Web & Mobile Game" {
       task tEvaluacionDecision "Evaluacion y decisión" {
         effort 3d
         allocate dev1
+        journalentry 2024-04-13 "Consultar con boss" {
+          author boss
+          alert red
+          summary "Consultar con boss para acordar la financiación del servidor."
+        }
       }
       task tDespliegue "Despliegue" {
         effort 6d
