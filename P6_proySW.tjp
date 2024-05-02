@@ -188,6 +188,9 @@ task WMGame "Web & Mobile Game" {
       purge chargeset
       chargeset despliegue
       responsible boss
+      depends WMGame.twebF
+      depends WMGame.tmobileF
+      depends WMGame.tback
       task tEvaluacionDecision "Evaluacion y decisión" {
         effort 9d
         allocate dev1
@@ -197,9 +200,6 @@ task WMGame "Web & Mobile Game" {
         allocate dev1
         depends WMGame.tdespliegue.tEvaluacionDecision
       }
-      depends WMGame.twebF
-      depends WMGame.tmobileF
-      depends WMGame.tback
   }
 
     
