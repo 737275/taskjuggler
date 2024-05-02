@@ -30,7 +30,7 @@ project pSix "Web Game"  2024-03-15 +3m {
 }
 
 # This is not a real copyright for this file. It's just used as an example.
-copyright "Creative Commons 2023 Proyecto Software - Unizar."
+copyright "Creative Commons 2024 Proyecto Software - Unizar."
 
 # The daily default rate of all resources. This can be overridden for each
 # resource. We specify this, so that we can do a good calculation of
@@ -108,7 +108,7 @@ task WMGame "Web & Mobile Game" {
       actual:effort 11d
       allocate dev1, dev2
       depends WMGame.tback.tBEd
-      journalentry 2023-03-28 "Game logic completed before deadline" {
+      journalentry 2024-03-28 "Game logic completed before deadline" {
         author boss
         alert green
         summary "The team has ended the game logic before deadline."
@@ -130,7 +130,7 @@ task WMGame "Web & Mobile Game" {
       effort 9d
       actual:effort 15d
       allocate dev3
-      journalentry 2023-04-11 "Problems with the GUI design tool" {
+      journalentry 2024-04-11 "Problems with the GUI design tool" {
         author dev3
         alert yellow
         summary "The tool used for the GUI design has given me a lot of problems. I recommend to look for other one."
@@ -173,9 +173,9 @@ task WMGame "Web & Mobile Game" {
       effort 10d
       allocate boss
       allocate dev2
-      start 2023-06-01
+      start 2024-06-01
       actual:effort 15d
-      journalentry 2023-04-13 "Problems with the planned dates" {
+      journalentry 2024-04-13 "Problems with the planned dates" {
         author boss
         alert red
         summary "The whole team asiigned to this task has a trip to visit a new client from May 7th to May 12th. Needed to check if the project can be finished on time or it is necessary to reasign efforts."
