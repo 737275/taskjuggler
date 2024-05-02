@@ -11,9 +11,9 @@ project pSix "Web Game"  2023-03-15 +2.5m {
   timezone "Europe/Paris"
   # Hide the clock time. Only show the date.
   timeformat "%Y-%m-%d"
-  # Use Euroepan format for numbers
+  # Use European format for numbers
   numberformat "-" "" "." "," 2
-  # Use Eurpean financial format for currency values. Don't show cents.
+  # Use European financial format for currency values. Don't show cents.
   currencyformat "-" "" "." "," 2
   # Pick a day during the project that will be reported as 'today' in
   # the project reports. If not specified, the current day will be
@@ -154,13 +154,16 @@ task WMGame "Web & Mobile Game" {
     depends WMGame.tback.tBEd
     task tGUId "Mobile GUI Design" {
       effort 9d
+      allocate dev3
     }
     task tFEc "Mobile Front End Construction" {
       effort 15d
+      allocate dev2, dev3
       depends WMGame.tmobileF.tGUId
     }
     task tFEt "Mobile Front End Test" {
       effort 6d
+      allocate dev1
       depends WMGame.tmobileF.tFEc
     }    
   }
